@@ -1,0 +1,43 @@
+<!--<pre>{{contactForm.value | json}}</pre>-->
+<h1>Contacto</h1>
+<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+    <div class="mb-4">
+        <label for="name" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="model.name" required #name="ngModel">
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">This field is required.</div>
+    </div>
+
+    <div class="mb-4">
+        <label for="peso" class="form-label">Peso</label>
+        <input type="text" class="form-control" id="peso" name="peso" [(ngModel)]="model.peso" required #peso="ngModel">
+        <div [hidden]="peso.valid || peso.pristine" class="alert alert-danger">This field is required.</div>
+    </div>
+
+    <div class="mb-4">
+        <label for="pelaje" class="form-label">Pelaje</label>
+        <input type="text" class="form-control" id="pelaje" name="pelaje" [(ngModel)]="model.pelaje" required #pelaje="ngModel">
+        <div [hidden]="pelaje.valid || pelaje.pristine" class="alert alert-danger">This field is required.</div>
+    </div>
+
+    <div class="mb-4">
+        <label for="sexo" class="form-label">Sexo</label>
+        <select name="sexo" id="sexo" class="form-select form-select-sm" [(ngModel)]="model.sexo" required #sexo="ngModel">
+            <option selected>Seleccione una opcion</option>
+            <option value="macho">Macho</option>
+            <option value="hembra">Hembra</option>
+        </select>
+        <div [hidden]="sexo.valid || sexo.pristine" class="alert alert-danger">This field is required.</div>
+    </div>
+
+    <div class="mb-4">
+        <label for="comment" class="form-label">Diagnostico</label>
+        <textarea class="form-control" name="comment" id="comment" rows="4" placeholder="Diagnostico inicial para la atencion" [(ngModel)]="model.comment" required #comment="ngModel"></textarea>
+        <div [hidden]="comment.valid || comment.pristine" class="alert alert-danger">This field is required.</div>
+    </div>
+
+    <div class="d-grid gap-2 col-4 float-center">
+        <button type="submit" class="btn btn-info btn-lg" [disabled]="contactForm.invalid">Enviar consulta</button>
+    </div>
+
+   
+</form>
