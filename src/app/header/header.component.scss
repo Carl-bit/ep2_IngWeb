@@ -1,17 +1,13 @@
-nav{ 
-    width: auto;
-    height: 100px;
+.nav-item{
+    padding: 15px;
 }
 
-ul {
-    list-style: none;
+a{
+    color: white;
 }
-
-li{ 
-    float: right;
-    margin: 10px;
-}
-
 a:hover{
     color: yellow;
 }
+
+
+

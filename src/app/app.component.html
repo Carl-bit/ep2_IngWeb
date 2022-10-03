@@ -1,32 +1,6 @@
-<!--
-<hr>
-<p *ngIf="name">El nombre es: {{name}}</p>
-<input type="text" [(ngModel)]="name">
 
-<ul *ngFor="let city of cities">
-    <li (click)="onCityClicked(city)" [ngClass]="{'selected': city === selection}">{{city}}</li>
-</ul>
-
-<div *ngIf="selection">
-  <p >Your city is : {{selection}}</p>
-  <button (click)="onClear()" >Clear ur selection</button>
-</div>
-
-<div class="container">
-  <div class="col-9">
-    
-    <app-registro></app-registro>
-    <app-contacto></app-contacto>
-  </div>
-  <div class="col-3"></div>
-</div>
-<--no se pa que era heh-------
-<router-outlet></router-outlet>
-
-<app-footer></app-footer>
--->
 <app-header></app-header>
-<hr>
+
 
 <router-outlet></router-outlet>
 
