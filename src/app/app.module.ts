@@ -7,6 +7,16 @@ import { AppComponent } from './app.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { HeaderComponent } from './header/header.component';
 import { RegistroComponent } from './registro/registro.component';
+import { PrincipalComponent } from './principal/principal.component';
+import { MedidasComponent } from './medidas/medidas.component';
+import { PatologiasComponent } from './patologias/patologias.component';
+import { InicioComponent } from './inicio/inicio.component';
+import { UsuarioComponent } from './usuario/usuario.component';
+
+//bootstrap
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 
 @NgModule({
@@ -14,12 +24,20 @@ import { RegistroComponent } from './registro/registro.component';
     AppComponent,
     ContactoComponent,
     HeaderComponent,
-    RegistroComponent
+    RegistroComponent,
+    PrincipalComponent,
+    MedidasComponent,
+    PatologiasComponent,
+    InicioComponent,
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule,
+    NgbCarouselModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

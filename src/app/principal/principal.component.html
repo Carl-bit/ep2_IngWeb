@@ -1,0 +1,44 @@
+<h1>Cabeza</h1>
+
+<ngb-carousel>
+    <ng-template *ngFor="let pelicula of peliculas" ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img src="{{pelicula.img}}" alt="Random first slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>{{pelicula.name}}</h3>
+        <p>{{pelicula.desc}}</p>
+      </div>
+    </ng-template>
+</ngb-carousel>
+
+<div class="tarjetas">
+    <div id="tarjeta" class="card mb-3" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+    </div>
+    <div id="tarjeta" class="card mb-3" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+    </div>
+    <div id="tarjeta" class="card mb-3" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+    </div>
+    
+</div>
