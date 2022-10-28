@@ -7,8 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
+  email: string | undefined;
+  password: string | undefined;
+
+  login() {
+    console.log(this.email);
+    console.log(this.password);
+  }
   ngOnInit(): void {
   }
 

@@ -8,6 +8,7 @@ import { MedidasComponent } from './medidas/medidas.component';
 import { PatologiasComponent } from './patologias/patologias.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { UsuarioComponent } from './usuario/usuario.component';
+import { CuidadosComponent } from './cuidados/cuidados.component';
 
 const routes: Routes = [
   { path:'', component:PrincipalComponent},
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'medidas', component: MedidasComponent },
   { path: 'patologias', component: PatologiasComponent },
   { path: 'inicio', component: InicioComponent },
-  { path: 'usuario', component: UsuarioComponent }
+  { path: 'usuario', component: UsuarioComponent },
+  { path: 'cuidados', component: CuidadosComponent }
 ]
 
 @NgModule({

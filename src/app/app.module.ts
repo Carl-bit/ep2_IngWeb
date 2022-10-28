@@ -13,6 +13,8 @@ import { PatologiasComponent } from './patologias/patologias.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 
+import { CuidadosComponent } from './cuidados/cuidados.component';
+
 //bootstrap
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
@@ -29,7 +31,8 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
     MedidasComponent,
     PatologiasComponent,
     InicioComponent,
-    UsuarioComponent
+    UsuarioComponent,
+    CuidadosComponent
   ],
   imports: [
     BrowserModule,
