@@ -1,10 +1,33 @@
+
 .text{
+    margin: 15px;
+    margin-top: 6%;
+    margin-bottom: 5%;
+}
+
+.col{
+    padding: 30px;
+}
+
+.tarjetas {
+    min-width: 480px;
+}
+
+h3{
     margin: 15px;
 }
 
 .groupCard{
-    border-color: #aaaaaa;
-    border-width: 1px;
-    border-style: solid;
-    padding: 30px;
+    min-width: 480px;
+   
+    padding: 15px;
+}
+
+#tar{   
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+img{
+    max-height: 50%;
 }
