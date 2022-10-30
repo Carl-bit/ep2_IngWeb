@@ -12,24 +12,30 @@ import { NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap';
 export class PrincipalComponent implements OnInit {
 
   peliculas:any[]=[
-    {name:'Frozen 2',
+    {name:'Bienvenidos',
     img:'assets/gato1.jpg',
-    desc:'Elsa, Anna, Kristoff and Olaf head far into the forest to learn the truth about an ancient mystery of their kingdom.'},
+    desc:'En Wild Wild Pussycats buscamos la incentivación del cuidado y preocupaciones por los felinos.'},
     {
-      name:'The Irishman',
+      name:'Traviesos',
       img:'assets/gato2.jpg',
-      desc:'Pennsylvania, 1956. Frank Sheeran, a war veteran of Irish origin who works as a truck driver, accidentally meets mobster Russell Bufalino. Once Frank becomes his trusted man, Bufalino sends him to Chicago with the task of helping Jimmy Hoffa, a powerful union leader related to organized crime, with whom Frank will maintain a close friendship for nearly twenty years.'
+      desc:'Comprender el comportamiento de los felinos por explorar su mundo puede ser caotico, pero no el fin.'
+    },
+    {
+      name:'Delicados',
+      img:'assets/gato3.jpg',
+      desc:'Sin embargo necesitan un cuidado especificos, y nosotros te enseñaremos como'
     }
   ];
 
   constructor(private _config:NgbCarouselConfig) {
-    _config.interval = 30000;
+    _config.interval = 3000;
     _config.pauseOnHover = true;
-    _config.showNavigationArrows = true;
+    _config.showNavigationArrows = false;
   }
 
   ngOnInit() {
   }
+
 
   
 }

@@ -18,6 +18,7 @@ import { CuidadosComponent } from './cuidados/cuidados.component';
 //bootstrap
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -32,7 +33,8 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
     PatologiasComponent,
     InicioComponent,
     UsuarioComponent,
-    CuidadosComponent
+    CuidadosComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
