@@ -1,18 +1,49 @@
-.nav{
-    min-width: 580px;
+$menuBreakpoint: 615px;
+$menuHeight: 60px;
+
+.menu-nav{
+    display: flex;
+    align-items: center;
+    
 }
 
-.nav-item{
-    padding: 15px;
+.nav-menu{
+    padding: 0 10px;
+    height: $menuHeight;
+    line-height: $menuHeight;
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 a{
     color: white;
     font-size: 1em;
+    padding: 2-5px;
 }
 a:hover{
     color: yellow;
 }
 
+.burger{
+    padding: 0 10px;
+    border-left: 1px solid #eee;
+    display: none;
+    cursor: pointer;
 
+    @media (max-width: $menuBreakpoint){
+        background-color: #262626;
+    }
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    -webkit-transition: all 0.3s ease-in-out;
+    background-color: white;
+}
 

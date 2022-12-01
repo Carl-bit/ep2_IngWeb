@@ -12,6 +12,10 @@ import { MedidasComponent } from './medidas/medidas.component';
 import { PatologiasComponent } from './patologias/patologias.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { UsuarioComponent } from './usuario/usuario.component';
+import {FlexLayoutModule} from "@angular/flex-layout";
+import { ModificarComponent } from './modificar/modificar.component';
+import {HttpClientModule} from '@angular/common/http';
+
 
 import { CuidadosComponent } from './cuidados/cuidados.component';
 
@@ -34,14 +38,17 @@ import { FooterComponent } from './footer/footer.component';
     InicioComponent,
     UsuarioComponent,
     CuidadosComponent,
-    FooterComponent
+    FooterComponent,
+    ModificarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     NgbModule,
-    NgbCarouselModule
+    NgbCarouselModule,
+    FlexLayoutModule,
+    HttpClientModule
     
   ],
   providers: [],
