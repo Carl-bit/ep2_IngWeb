@@ -3,7 +3,7 @@
     <div class="container">
         <H1>Lista de dueños</H1>
 
-        <button type="button" class="btn btn-primary">Agregar</button>
+        <button routerLink="/registro" type="button" class="btn btn-primary">Agregar</button>
     
 
         <table class="table">
@@ -21,17 +21,17 @@
             </thead>
             <tbody>
               <tr *ngFor="let duenio of ListarDuenios">
-                <th>{{duenio.id_duenio}}</th>
+                <th>{{duenio.duenio_id}}</th>
                 <td>{{duenio.nombre}}</td>
                 <td>{{duenio.edad}}</td>
                 <td>{{duenio.direccion}}</td>
                 <td>{{duenio.genero}}</td>
                 <td>{{duenio.email}}</td>
                 <td> 
-                    <button (click)="modificar(duenio.id_duenio)" type="button" class="btn btn-warning">Editar</button>
+                    <button (click)="modificar(duenio.duenio_id)" type="button" class="btn btn-warning">Editar</button>
                 </td>
                 <td>
-                    <button (click)="eliminar(duenio.id_duenio)" type="button" class="btn btn-danger">Eliminar</button>
+                    <button (click)="eliminar(duenio.duenio_id)" type="button" class="btn btn-danger">Eliminar</button>
                 </td>
               </tr>
               

@@ -34,7 +34,7 @@ export class UsuarioComponent implements OnInit {
     this.ss.deleteDuenio(id).subscribe({
       next: (res)=>{console.log('Equipo Eliminado');},
       error: (err)=>console.log(err),
-      complete: ()=>console.log('completed')
+      complete: ()=>this.listarEquipo()
     })
   }
 

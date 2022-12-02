@@ -6,21 +6,21 @@
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <div class="mb-4">
                 <label for="name" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="name" name="name" [(ngModel)]="model.name" required
+                <input type="text" class="form-control" id="name" name="name" [(ngModel)]="duenio.nombre" required
                     #name="ngModel" placeholder="Nombre Apellido">
                 <div [hidden]="name.valid || name.pristine" class="alert alert-danger">This field is required.</div>
             </div>
 
             <div class="mb-4">
                 <label for="peso" class="form-label">Edad</label>
-                <input type="text" class="form-control" id="edad" name="edad" [(ngModel)]="model.edad" required
+                <input type="text" class="form-control" id="edad" name="edad" [(ngModel)]="duenio.edad" required
                     #edad="ngModel">
                 <div [hidden]="edad.valid || edad.pristine" class="alert alert-danger">This field is required.</div>
             </div>
 
             <div class="mb-4">
                 <label for="direccion" class="form-label">Direccion</label>
-                <input type="text" class="form-control" id="direccion" name="direccion" [(ngModel)]="model.direccion"
+                <input type="text" class="form-control" id="direccion" name="direccion" [(ngModel)]="duenio.direccion"
                     required #direccion="ngModel">
                 <div [hidden]="direccion.valid || direccion.pristine" class="alert alert-danger">This field is required.
                 </div>
@@ -28,24 +28,24 @@
 
             <div class="mb-4">
                 <label for="name" class="form-label">Correo Electronico</label>
-                <input type="text" class="form-control" id="correo" name="correo" [(ngModel)]="model.correo" required
+                <input type="text" class="form-control" id="correo" name="correo" [(ngModel)]="duenio.email" required
                     #correo="ngModel" placeholder="xxxx@xxx.xxx">
                 <div [hidden]="correo.valid || correo.pristine" class="alert alert-danger">This field is required.</div>
             </div>
 
             <div class="mb-4">
                 <label for="sexo" class="form-label">Sexo</label>
-                <select name="sexo" id="sexo" class="form-select form-select-sm" [(ngModel)]="model.sexo" required
+                <select name="sexo" id="sexo" class="form-select form-select-sm" [(ngModel)]="duenio.genero" required
                     #sexo="ngModel">
                     <option selected>Prefiero no especificar</option>
-                    <option value="macho">Masculino</option>
-                    <option value="hembra">Femenino</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
                 </select>
                 <div [hidden]="sexo.valid || sexo.pristine" class="alert alert-danger">This field is required.</div>
             </div>
 
             <div class="d-grid gap-3 col-4 float-left">
-                <button id = "boton" type="submit" class="btn btn-info btn-lg" [disabled]="contactForm.invalid">Modificar</button>
+                <button (click)="modificar()" id = "boton" type="submit" class="btn btn-info btn-lg" [disabled]="contactForm.invalid">Modificar</button>
             </div>
 
 

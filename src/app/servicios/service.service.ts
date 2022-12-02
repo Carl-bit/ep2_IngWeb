@@ -44,10 +44,10 @@ export class ServiceService {
 
 
 export interface Duenio{
-  id_duenio:string;
+  duenio_id:string;
   nombre:string;
-  edad:number;
-  direccion?:string;
+  edad:string;
+  direccion:string;
   genero:string;
   email:string;
 }

@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'inicio', component: InicioComponent },
   { path: 'usuario', component: UsuarioComponent },
   { path: 'cuidados', component: CuidadosComponent },
-  {path: 'modificar', component: ModificarComponent}
+  {path: 'modificar/:id', component: ModificarComponent}
 ]
 
 @NgModule({
