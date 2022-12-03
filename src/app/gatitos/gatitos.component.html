@@ -1,0 +1,39 @@
+<div class="gatitos">
+
+  <div class="container">
+    <H1>Lista de gatos</H1>
+
+    <button routerLink="/contacto" type="button" class="btn btn-primary">volver</button>
+
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Peso</th>
+            <th scope="col">Pelaje</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Diagnostico</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let gato of ListarGatos">
+            <th>{{gato.gato_id}}</th>
+            <td>{{gato.nombre}}</td>
+            <td>{{gato.peso}}</td>
+            <td>{{gato.pelaje}}</td>
+            <td>{{gato.genero}}</td>
+            <td>{{gato.diag_id}}</td>     
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+<div ></div>
+
+
+
+
+
+</div>

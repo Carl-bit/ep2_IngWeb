@@ -3,14 +3,6 @@ import { FormGroup, FormControl,FormArray, Validators, NgForm } from '@angular/f
 import { ServiceService, Gato} from '../servicios/service.service';
 import { Router } from '@angular/router';
 
-interface ContactForm
-{
-  "name": "",
-  "peso": "",
-  "pelaje": "",
-  "sexo": "",
-  "comment": ""
-}
 
 @Component({
   selector: 'app-contacto',
@@ -19,20 +11,32 @@ interface ContactForm
 })
 export class ContactoComponent implements OnInit {
 
-  ListarGatos!: Gato[];
+  gato:Gato={
+    gato_id:"",
+    nombre:"",
+    peso:"",
+    pelaje:"",
+    genero:"",
+    diag_id:"",
+  };
   constructor(private ss:ServiceService, private ruta:Router) { }
 
   ngOnInit(): void {
-    this.listarEquipo();
   }
 
-  listarEquipo(){
-    this.ss.mostrarGatos().subscribe({
-      next: (res)=>{console.log(res); this.ListarGatos=<any>res},
+  onSubmit(form:NgForm):void{
+    console.log('Form values',form)
+  }
+
+  agregar(){
+    const x = this.gato as Partial<Gato>;
+    delete x.gato_id;
+
+    this.ss.crearGato(x).subscribe({
+      next: (res)=>{console.log("Subido con exito");console.log(x)},
       error: (err)=>console.log(err),
-      complete: ()=>console.log('completed')
-    }
-    );
+      complete: ()=>{this.gato.nombre = "";this.gato.genero="";this.gato.pelaje="";this.gato.peso="";this.gato.diag_id="";console.log("Terminado");}
+    });
+    
   }
-
 }

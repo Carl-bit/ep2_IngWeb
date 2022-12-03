@@ -27,12 +27,20 @@ export class InicioComponent implements OnInit {
 
   redirect(){
     console.log(this.email + this.password);
-    this.ss.mostrarUser().subscribe({
-      next: (res)=>{console.log(res); this.ListarUser=<any>res},
+    this.ss.getInicio(this.email).subscribe({
+      next: (res)=>{console.log(res);this.user=res;},
       error: (err)=>console.log(err),
       complete: ()=>console.log('completed')
+    });
+
+    if(this.user.email_user === this.email && this.user.pass === this.password){
+      this.ruta.navigate(['/usuario']);
+    }else{
+      this.email ="";
+      this.password = "";
+      console.log("no coinciden las cosas");
     }
-    );
+
   }
 
   ngOnInit(): void {

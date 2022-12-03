@@ -16,7 +16,6 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 import { ModificarComponent } from './modificar/modificar.component';
 import {HttpClientModule} from '@angular/common/http';
 
-
 import { CuidadosComponent } from './cuidados/cuidados.component';
 
 //bootstrap
@@ -24,6 +23,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './footer/footer.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { GatitosComponent } from './gatitos/gatitos.component';
 
 
 
@@ -41,7 +41,8 @@ import { PerfilComponent } from './perfil/perfil.component';
     CuidadosComponent,
     FooterComponent,
     ModificarComponent,
-    PerfilComponent
+    PerfilComponent,
+    GatitosComponent
   ],
   imports: [
     BrowserModule,

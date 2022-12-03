@@ -45,8 +45,8 @@ export class ServiceService {
 
 //-----------------------------------------------------------------
 
-getInicio(id:string):Observable<User>{
-  return this.http.get<User>(this.urlLogin+'/'+id);
+getInicio(email:string):Observable<User>{
+  return this.http.get<User>(this.urlLogin+'/'+email);
 }
 
   mostrarUser(){

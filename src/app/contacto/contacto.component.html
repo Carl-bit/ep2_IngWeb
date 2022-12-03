@@ -1,92 +1,71 @@
-<div class="con">
+<div class="space">
     <div class="container">
-        <H1>Lista de gatos</H1>
+        <h1>Contacto</h1>
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+            <div class="mb-4">
+                <label for="name" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="name" name="name" [(ngModel)]="gato.nombre" required
+                    #name="ngModel">
+                <div [hidden]="name.valid || name.pristine" class="alert alert-danger">This field is required.</div>
+            </div>
 
-        <button routerLink="/registro" type="button" class="btn btn-primary">Agregar</button>
-    
+            <div class="mb-4">
+                <label for="peso" class="form-label">Peso</label>
+                <input type="text" class="form-control" id="peso" name="peso" [(ngModel)]="gato.peso" required
+                    #peso="ngModel">
+                <div [hidden]="peso.valid || peso.pristine" class="alert alert-danger">This field is required.</div>
+            </div>
 
-        <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Edad</th>
-                <th scope="col">Direccion</th>
-                <th scope="col">Sexo</th>
-                <th scope="col">Email</th>
-                <th scope="col">Perfil</th>
-                <th scope="col">Editar</th>
-                <th scope="col">Eliminar</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let gato of ListarGatos">
-                <th>{{gato.gato_id}}</th>
-                <td>{{gato.nombre}}</td>
-                <td>{{gato.peso}}</td>
-                <td>{{gato.pelaje}}</td>
-                <td>{{gato.genero}}</td>
-                <td>{{gato.diag_id}}</td>
+            <div class="mb-4">
+                <label for="pelaje" class="form-label">Pelaje</label>
+                <input type="text" class="form-control" id="pelaje" name="pelaje" [(ngModel)]="gato.pelaje" required
+                    #pelaje="ngModel">
+                <div [hidden]="pelaje.valid || pelaje.pristine" class="alert alert-danger">This field is required.</div>
+            </div>
+
+            <div class="mb-4">
+                <label for="sexo" class="form-label">Sexo</label>
+                <select name="sexo" id="sexo" class="form-select form-select-sm" [(ngModel)]="gato.genero" required
+                    #sexo="ngModel">
+                    <option selected>Seleccione una opcion</option>
+                    <option value="macho">Macho</option>
+                    <option value="hembra">Hembra</option>
+                </select>
+                <div [hidden]="sexo.valid || sexo.pristine" class="alert alert-danger">This field is required.</div>
+            </div>
+
+            <div class="mb-4">
+                <label for="comment" class="form-label">Diagnostico</label>
+                <textarea class="form-control" name="comment" id="comment" rows="4"
+                    placeholder="Diagnostico inicial para la atencion" [(ngModel)]="gato.diag_id" required
+                    #comment="ngModel"></textarea>
+                <div [hidden]="comment.valid || comment.pristine" class="alert alert-danger">This field is required.
+                </div>
+            </div>
+
+            <div class="d-grid gap-2 col-4 float-center">
                 
-                
-              </tr>
-              
-            </tbody>
-          </table>
+                    <button (click)="agregar()" type="submit" class="btn btn-info btn-lg"
+                        [disabled]="contactForm.invalid">Enviar
+                        consulta</button>
+                    
+            </div>
+        </form>
+
+        <h3> ¡Revisa Las demas consultas! </h3>
+
+        <div class="botones">
+
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button routerLink="/gatitos" type="button" class="btn btn-success btn-lg">¡Gatitos!</button>
+
+            </div>
+        </div>
+
     </div>
-    
 </div>
 
 
 <!-- 
-     <h1>Contacto</h1>
-     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-         <div class="mb-4">
-             <label for="name" class="form-label">Nombre</label>
-             <input type="text" class="form-control" id="name" name="name" [(ngModel)]="model.name" required
-                 #name="ngModel">
-             <div [hidden]="name.valid || name.pristine" class="alert alert-danger">This field is required.</div>
-         </div>
-
-         <div class="mb-4">
-             <label for="peso" class="form-label">Peso</label>
-             <input type="text" class="form-control" id="peso" name="peso" [(ngModel)]="model.peso" required
-                 #peso="ngModel">
-             <div [hidden]="peso.valid || peso.pristine" class="alert alert-danger">This field is required.</div>
-         </div>
-
-         <div class="mb-4">
-             <label for="pelaje" class="form-label">Pelaje</label>
-             <input type="text" class="form-control" id="pelaje" name="pelaje" [(ngModel)]="model.pelaje" required
-                 #pelaje="ngModel">
-             <div [hidden]="pelaje.valid || pelaje.pristine" class="alert alert-danger">This field is required.</div>
-         </div>
-
-         <div class="mb-4">
-             <label for="sexo" class="form-label">Sexo</label>
-             <select name="sexo" id="sexo" class="form-select form-select-sm" [(ngModel)]="model.sexo" required
-                 #sexo="ngModel">
-                 <option selected>Seleccione una opcion</option>
-                 <option value="macho">Macho</option>
-                 <option value="hembra">Hembra</option>
-             </select>
-             <div [hidden]="sexo.valid || sexo.pristine" class="alert alert-danger">This field is required.</div>
-         </div>
-
-         <div class="mb-4">
-             <label for="comment" class="form-label">Diagnostico</label>
-             <textarea class="form-control" name="comment" id="comment" rows="4"
-                 placeholder="Diagnostico inicial para la atencion" [(ngModel)]="model.comment" required
-                 #comment="ngModel"></textarea>
-             <div [hidden]="comment.valid || comment.pristine" class="alert alert-danger">This field is required.
-             </div>
-         </div>
-
-         <div class="d-grid gap-2 col-4 float-center">
-             <button type="submit" class="btn btn-info btn-lg" [disabled]="contactForm.invalid">Enviar
-                 consulta</button>
-         </div>
-
-
-     </form>
+     
 -->

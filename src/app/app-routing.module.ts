@@ -11,6 +11,7 @@ import { UsuarioComponent } from './usuario/usuario.component';
 import { CuidadosComponent } from './cuidados/cuidados.component';
 import { ModificarComponent } from './modificar/modificar.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { GatitosComponent } from './gatitos/gatitos.component';
 
 const routes: Routes = [
   { path:'', component:PrincipalComponent},
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: 'usuario', component: UsuarioComponent },
   { path: 'cuidados', component: CuidadosComponent },
   {path: 'modificar/:id', component: ModificarComponent},
-  {path: 'perfil/:id', component:PerfilComponent}
+  {path: 'perfil/:id', component:PerfilComponent},
+  {path: 'gatitos', component:GatitosComponent}
 ]
 
 @NgModule({
