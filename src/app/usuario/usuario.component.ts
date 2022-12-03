@@ -22,12 +22,15 @@ export class UsuarioComponent implements OnInit {
       error: (err)=>console.log(err),
       complete: ()=>console.log('completed')
     }
-    
     );
   }
 
   modificar(id:string){
     this.ruta.navigate(['/modificar/'+id]);
+  }
+
+  perfil(id:string){
+    this.ruta.navigate(['/perfil/'+id]);
   }
 
   eliminar(id:string){

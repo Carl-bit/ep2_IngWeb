@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl,FormArray, Validators, NgForm } from '@angular/forms';
+import { ServiceService, Gato} from '../servicios/service.service';
+import { Router } from '@angular/router';
+
 interface ContactForm
 {
   "name": "",
@@ -16,22 +19,20 @@ interface ContactForm
 })
 export class ContactoComponent implements OnInit {
 
-  model={
-    name: "",
-    peso: "",
-    pelaje: "",
-    sexo: "",
-    comment: ""
-  }
-
-  constructor() { }
-  
+  ListarGatos!: Gato[];
+  constructor(private ss:ServiceService, private ruta:Router) { }
 
   ngOnInit(): void {
+    this.listarEquipo();
   }
 
-  onSubmit(form:NgForm):void{
-    console.log('Form values',form)
+  listarEquipo(){
+    this.ss.mostrarGatos().subscribe({
+      next: (res)=>{console.log(res); this.ListarGatos=<any>res},
+      error: (err)=>console.log(err),
+      complete: ()=>console.log('completed')
+    }
+    );
   }
 
 }

@@ -23,6 +23,7 @@ import { CuidadosComponent } from './cuidados/cuidados.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './footer/footer.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 
 
@@ -39,7 +40,8 @@ import { FooterComponent } from './footer/footer.component';
     UsuarioComponent,
     CuidadosComponent,
     FooterComponent,
-    ModificarComponent
+    ModificarComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,

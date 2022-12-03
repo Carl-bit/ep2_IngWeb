@@ -15,6 +15,7 @@
                 <th scope="col">Direccion</th>
                 <th scope="col">Sexo</th>
                 <th scope="col">Email</th>
+                <th scope="col">Perfil</th>
                 <th scope="col">Editar</th>
                 <th scope="col">Eliminar</th>
               </tr>
@@ -27,12 +28,16 @@
                 <td>{{duenio.direccion}}</td>
                 <td>{{duenio.genero}}</td>
                 <td>{{duenio.email}}</td>
+                <td>
+                  <button (click)="perfil(duenio.duenio_id)" type="button" class="btn btn-info">Perfil</button>
+                </td>
                 <td> 
                     <button (click)="modificar(duenio.duenio_id)" type="button" class="btn btn-warning">Editar</button>
                 </td>
                 <td>
                     <button (click)="eliminar(duenio.duenio_id)" type="button" class="btn btn-danger">Eliminar</button>
                 </td>
+                
               </tr>
               
             </tbody>
